@@ -1,4 +1,11 @@
-// Your code here
+function tripletTrue(word) {
+  for (let i = 0; i < word.length; i++) {
+    if (word[i] === word [i + 1] && word[i] === word[i + 2]) {
+      return true;
+    }
+  }
+  return false;
+}
 
 
 
