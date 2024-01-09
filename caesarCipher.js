@@ -2,7 +2,16 @@
 // const alphabet = "abcdefghijklmnopqrstuvwxyz";
 
 function caesarCipher(string, num) {
-  // your code here
+  const alphabet = "abcdefghijklmnopqrstuvwxyz";
+  let newString = "";
+  for (let i = 0; i < string.length; i++) {
+    let char = string[i];
+    let alphIndex = alphabet.indexOf(char);
+    let newIndex = alphIndex + num;
+    let newChar = alphabet[newIndex % alphabet.length];
+    newString += newChar;
+  }
+  return newString;
 }
 
 console.log(caesarCipher("apple", 1)); // "bqqmf"
