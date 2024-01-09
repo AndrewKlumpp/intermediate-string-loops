@@ -1,5 +1,10 @@
 function lastIndex(str, char) {
-  // your code here
+  for (let i = str.length - 1; i >= 0; i--) {
+    let letter = str[i];
+    if (char === letter) {
+      return i;
+    }
+  }
 }
 
 console.log(lastIndex("abca", "a"))        // 3
